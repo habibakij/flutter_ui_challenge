@@ -111,6 +111,7 @@ class _MyHomePageState extends State<HomeScreen> {
                             ],
                           ),
                           Card(
+                            //margin: const EdgeInsets.all(16.0),
                             margin: const EdgeInsets.only(top: 8.0, bottom: 8.0, left: 16.0, right: 16.0),
                             elevation: 3.0,
                             shape: const RoundedRectangleBorder(
@@ -321,7 +322,7 @@ class _MyHomePageState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              height: 180.0,
+                              height: 185.0,
                               width: (MediaQuery.of(context).size.width / 2) - 25,
                               padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 16.0, right: 16.0),
                               decoration: BoxDecoration(
@@ -369,7 +370,7 @@ class _MyHomePageState extends State<HomeScreen> {
                               ),
                             ),
                             Container(
-                              height: 180.0,
+                              //height: 185.0,
                               width: (MediaQuery.of(context).size.width / 2) - 25,
                               padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 16.0, right: 16.0),
                               decoration: BoxDecoration(
@@ -454,7 +455,7 @@ class _MyHomePageState extends State<HomeScreen> {
                             Container(
                               height: 120.0,
                               width: (MediaQuery.of(context).size.width / 2) - 25,
-                              padding: const EdgeInsets.only(bottom: 5.0, left: 16.0, right: 16.0),
+                              padding: const EdgeInsets.only(bottom: 5.0, left: 8.0, right: 8.0),
                               decoration: BoxDecoration(
                                 color: CustomColor.activeShadowColor,
                                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
@@ -508,7 +509,7 @@ class _MyHomePageState extends State<HomeScreen> {
                             Container(
                               height: 120.0,
                               width: (MediaQuery.of(context).size.width / 2) - 25,
-                              padding: const EdgeInsets.only(bottom: 5.0, left: 16.0, right: 16.0),
+                              padding: const EdgeInsets.only(bottom: 5.0, left: 8.0, right: 8.0),
                               decoration: BoxDecoration(
                                 color: CustomColor.activeShadowColor,
                                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
