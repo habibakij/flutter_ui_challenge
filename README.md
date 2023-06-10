@@ -2,15 +2,24 @@
 
 A new Flutter project.
 
-## Getting Started
+Video and apk link.
+Google drive:
+https://drive.google.com/drive/folders/1cuUqRRsZKGBxecdC4T2BJFtJuEy6oDBx?usp=drive_link
 
-This project is a starting point for a Flutter application.
+Home Screen
 
-A few resources to get you started if this is your first Flutter project:
+![home](https://github.com/habibakij/ii_ui_task/assets/31959794/ed30dbe1-c630-4d00-b50d-16166914a347)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Smart Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![smart](https://github.com/habibakij/ii_ui_task/assets/31959794/2f49cd57-1044-42a5-9f7d-6dda7c59e6c0)
+
+Usage Screen
+
+![usage](https://github.com/habibakij/ii_ui_task/assets/31959794/2c754518-49e0-42bb-9909-fd17525c3cf8)
+
+User Screen
+
+![user](https://github.com/habibakij/ii_ui_task/assets/31959794/e247a0e7-fc7b-42a5-b19d-54cc1c0fe876)
+
+
