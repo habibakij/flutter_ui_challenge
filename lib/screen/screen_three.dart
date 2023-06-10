@@ -1,16 +1,14 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:ui_test/screen/home_screen.dart';
 import 'package:ui_test/screen/screen_four.dart';
 import 'package:ui_test/screen/screen_two.dart';
-
 import '../utils/color_management.dart';
 import '../utils/style_management.dart';
-import 'widget/text_widget.dart';
+import '../widget/bottom_nav_widget.dart';
+import '../widget/text_widget.dart';
 import 'chart/chart_container.dart';
 import 'chart/line_chart_container.dart';
-
 
 class ScreenThree extends StatelessWidget {
 
@@ -517,79 +515,20 @@ class ScreenThree extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              child: Container(
-                height: 50.0,
-                width: 70.0,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-                child: Image.asset(
-                  'assets/images/home.png',
-                  width: 30.0,
-                  height: 30.0,
-                ),
-              ),
+              child: BottomNavWidget(image: "assets/images/home_fill.png", title: "Home", isActive: 0),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
               },
             ),
             InkWell(
-              child: Container(
-                height: 50.0,
-                width: 70.0,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-                child: Image.asset(
-                  'assets/images/net.png',
-                  width: 30.0,
-                  height: 30.0,
-                  fit: BoxFit.fill,
-                ),
-              ),
+              child: BottomNavWidget(image: "assets/images/net.png", title: "Smart", isActive: 0),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTwo()));
               },
             ),
-            Container(
-              height: 50.0,
-              width: 100.0,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/images/pei_fill.png',
-                    width: 25.0,
-                    height: 25.0,
-                  ),
-                  const SizedBox(width: 5.0),
-                  TextWidget(title: "Usage", style: StyleManagement.testStyleAppColorBold16)
-                ],
-              ),
-            ),
+            BottomNavWidget(image: "assets/images/pei.png", title: "Usage", isActive: 1),
             InkWell(
-              child: Container(
-                height: 50.0,
-                width: 70.0,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-                child: Image.asset(
-                  'assets/images/user.png',
-                  width: 30.0,
-                  height: 30.0,
-                ),
-              ),
+              child: BottomNavWidget(image: "assets/images/user.png", title: "User", isActive: 0),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenFour()));
               },

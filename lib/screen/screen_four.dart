@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:ui_test/screen/home_screen.dart';
 import '../utils/color_management.dart';
 import '../utils/style_management.dart';
-import 'widget/text_widget.dart';
+import '../widget/text_widget.dart';
+
 
 class ScreenFour extends StatelessWidget {
 

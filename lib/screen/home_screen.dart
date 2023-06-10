@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ui_test/screen/screen_four.dart';
@@ -5,7 +6,10 @@ import 'package:ui_test/screen/screen_three.dart';
 import 'package:ui_test/screen/screen_two.dart';
 import 'package:ui_test/utils/color_management.dart';
 import 'package:ui_test/utils/style_management.dart';
-import 'package:ui_test/screen/widget/text_widget.dart';
+import '../widget/active_widget.dart';
+import '../widget/bottom_nav_widget.dart';
+import '../widget/rooms_widget.dart';
+import '../widget/text_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -315,102 +319,8 @@ class _MyHomePageState extends State<HomeScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              height: 185.0,
-                              width: (MediaQuery.of(context).size.width / 2) - 25,
-                              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 16.0, right: 16.0),
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                              child: Column(
-                                children: [
-                                  Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Container(
-                                      padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
-                                      decoration: BoxDecoration(
-                                        color: CustomColor.appColor,
-                                        borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                                      ),
-                                      child: const Text("19\u2103", style: StyleManagement.testStyleWhite14),
-                                    ),
-                                  ),
-                                  Image.asset(
-                                    'assets/images/seat_lamp.png',
-                                    width: 100.0,
-                                    height: 80.0,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  TextWidget(title: "Living Rooms", style: StyleManagement.testStyleBlackBold16),
-                                  const SizedBox(height: 5.0),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 5.0),
-                                        padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0, bottom: 5.0),
-                                        decoration: BoxDecoration(
-                                          color: HexColor("#FFE266"),
-                                          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                                        ),
-                                        child: TextWidget(title: "5", style: StyleManagement.testStyleBlack14),
-                                      ),
-                                      TextWidget(title: "Devices", style: StyleManagement.testStyleBlack12),
-                                    ],
-                                  ),
-
-                                ],
-                              ),
-                            ),
-                            Container(
-                              //height: 185.0,
-                              width: (MediaQuery.of(context).size.width / 2) - 25,
-                              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 16.0, right: 16.0),
-                              decoration: BoxDecoration(
-                                color: Colors.grey[300],
-                                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                              child: Column(
-                                children: [
-                                  Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Container(
-                                      padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
-                                      decoration: BoxDecoration(
-                                        color: CustomColor.appColor,
-                                        borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                                      ),
-                                      child: const Text("12\u2103", style: StyleManagement.testStyleWhite14),
-                                    ),
-                                  ),
-                                  Image.asset(
-                                    'assets/images/badroom.png',
-                                    width: 100.0,
-                                    height: 80.0,
-                                    fit: BoxFit.fill,
-                                  ),
-                                  const Text("BadRooms", style: StyleManagement.testStyleBlackBold16),
-                                  const SizedBox(height: 5.0),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 5.0),
-                                        padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0, bottom: 5.0),
-                                        decoration: BoxDecoration(
-                                          color: HexColor("#FFE266"),
-                                          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-                                        ),
-                                        child: TextWidget(title: "8", style: StyleManagement.testStyleBlack14),
-                                      ),
-                                      TextWidget(title: "Devices", style: StyleManagement.testStyleBlack12),
-                                    ],
-                                  ),
-
-                                ],
-                              ),
-                            ),
+                            RoomsWidget(degree: "19", image: "assets/images/seat_lamp.png", title: "Living Room", indicator: "5", indTitle: "Devices"),
+                            RoomsWidget(degree: "12", image: "assets/images/badroom.png", title: "Bad Room", indicator: "8", indTitle: "Devices"),
                           ],
                         ),
                         const SizedBox(height: 10.0),
@@ -446,112 +356,8 @@ class _MyHomePageState extends State<HomeScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              height: 120.0,
-                              width: (MediaQuery.of(context).size.width / 2) - 25,
-                              padding: const EdgeInsets.only(bottom: 5.0, left: 8.0, right: 8.0),
-                              decoration: BoxDecoration(
-                                color: CustomColor.activeShadowColor,
-                                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                              child: Column(
-                                children: [
-
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Image.asset(
-                                        'assets/images/room_temp.png',
-                                        width: 70.0,
-                                        height: 50.0,
-                                        fit: BoxFit.fill,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          TextWidget(title: "Temperature", style: StyleManagement.testStyleWhite12),
-                                          const Text("19\u2103", style: StyleManagement.testStyleWhiteBold18),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 20.0),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextWidget(title: "AC", style: StyleManagement.testStyleWhiteBold18),
-                                          TextWidget(title: "Living room", style: StyleManagement.testStyleWhite12),
-                                        ],
-                                      ),
-                                      Image.asset(
-                                        'assets/images/off.png',
-                                        width: 70.0,
-                                        height: 30.0,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ],
-                                  ),
-
-                                ],
-                              ),
-                            ),
-                            Container(
-                              height: 120.0,
-                              width: (MediaQuery.of(context).size.width / 2) - 25,
-                              padding: const EdgeInsets.only(bottom: 5.0, left: 8.0, right: 8.0),
-                              decoration: BoxDecoration(
-                                color: CustomColor.activeShadowColor,
-                                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
-                              ),
-                              child: Column(
-                                children: [
-
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Image.asset(
-                                        'assets/images/three_lamp.png',
-                                        width: 70.0,
-                                        height: 50.0,
-                                        fit: BoxFit.fill,
-                                      ),
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          TextWidget(title: "Colour", style: StyleManagement.testStyleWhite12),
-                                          TextWidget(title: "White", style: StyleManagement.testStyleWhiteBold18),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 20.0),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          TextWidget(title: "Lamp", style: StyleManagement.testStyleWhiteBold18),
-                                          TextWidget(title: "Dining room", style: StyleManagement.testStyleWhite12),
-                                        ],
-                                      ),
-                                      Image.asset(
-                                        'assets/images/off.png',
-                                        width: 70.0,
-                                        height: 30.0,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ],
-                                  ),
-
-                                ],
-                              ),
-                            ),
+                            ActiveWidget(tempImage: "assets/images/room_temp.png", tempTitle: "Temperature", temp: "19", title: "AC", subTitle: "Living room", acStatusImage: "assets/images/off.png", isAc: 1),
+                            ActiveWidget(tempImage: "assets/images/three_lamp.png", tempTitle: "Colour", temp: "White", title: "Lamp", subTitle: "Dining room", acStatusImage: "assets/images/off.png", isAc: 0),
                           ],
                         ),
                         const SizedBox(height: 10.0),
@@ -576,80 +382,21 @@ class _MyHomePageState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 50.0,
-              width: 100.0,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/images/home_fill.png',
-                    width: 25.0,
-                    height: 25.0,
-                  ),
-                  const SizedBox(width: 5.0),
-                  TextWidget(title: "Home", style: StyleManagement.testStyleAppColorBold16)
-                ],
-              ),
-            ),
+            BottomNavWidget(image: "assets/images/home_fill.png", title: "Home", isActive: 1),
             InkWell(
-              child: Container(
-                height: 50.0,
-                width: 70.0,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-                child: Image.asset(
-                  'assets/images/net.png',
-                  width: 30.0,
-                  height: 30.0,
-                  fit: BoxFit.fill,
-                ),
-              ),
+              child: BottomNavWidget(image: "assets/images/net.png", title: "Smart", isActive: 0),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTwo()));
               },
             ),
             InkWell(
-              child: Container(
-                height: 50.0,
-                width: 70.0,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-                child: Image.asset(
-                  'assets/images/pei.png',
-                  width: 30.0,
-                  height: 30.0,
-                ),
-              ),
+              child: BottomNavWidget(image: "assets/images/pei.png", title: "Usage", isActive: 0),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenThree()));
               },
             ),
             InkWell(
-              child: Container(
-                height: 50.0,
-                width: 70.0,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-                child: Image.asset(
-                  'assets/images/user.png',
-                  width: 30.0,
-                  height: 30.0,
-                ),
-              ),
+              child: BottomNavWidget(image: "assets/images/user.png", title: "User", isActive: 0),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenFour()));
               },
