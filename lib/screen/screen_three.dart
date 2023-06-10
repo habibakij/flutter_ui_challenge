@@ -7,6 +7,7 @@ import 'package:ui_test/screen/screen_two.dart';
 
 import '../utils/color_management.dart';
 import '../utils/style_management.dart';
+import 'widget/text_widget.dart';
 import 'chart/chart_container.dart';
 import 'chart/line_chart_container.dart';
 
@@ -131,7 +132,7 @@ class ScreenThree extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text("Total Today", style: StyleManagement.testStyleBlackBold16),
+                                  TextWidget(title: "Total Today", style: StyleManagement.testStyleBlackBold16),
                                   Container(
                                     margin: const EdgeInsets.only(left: 5.0),
                                     padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0, bottom: 5.0),
@@ -139,7 +140,7 @@ class ScreenThree extends StatelessWidget {
                                       color: CustomColor.appColor,
                                       borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                                     ),
-                                    child: const Text("4", style: StyleManagement.testStyleWhiteBold14),
+                                    child: TextWidget(title: "4", style: StyleManagement.testStyleWhiteBold14),
                                   ),
                                 ],
                               ),
@@ -188,11 +189,11 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Lamp", style: StyleManagement.testStyleBlackBold14),
+                                          TextWidget(title: "Lamp", style: StyleManagement.testStyleBlackBold14),
                                           Row(
                                             children: [
-                                              Text("1000", style: StyleManagement.testStyleAppColorBold14),
-                                              Text(" kw/h", style: StyleManagement.testStyleAppColor12),
+                                              TextWidget(title: "1000", style: StyleManagement.testStyleAppColorBold14),
+                                              TextWidget(title: " kw/h", style: StyleManagement.testStyleAppColor12),
                                             ],
                                           ),
 
@@ -202,7 +203,7 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Kitchen - Bedroom", style: StyleManagement.testStyleBlack14),
+                                          TextWidget(title: "Kitchen - Bedroom", style: StyleManagement.testStyleBlack14),
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             children: [
@@ -212,7 +213,7 @@ class ScreenThree extends StatelessWidget {
                                                 fit: BoxFit.fill,
                                                 color: Colors.red[300],
                                               ),
-                                              const Text("  -11.2%", style: StyleManagement.testStyleRed12),
+                                              TextWidget(title: "  -11.2%", style: StyleManagement.testStyleRed12),
                                             ],
                                           ),
 
@@ -222,14 +223,14 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
-                                          const Text("8 unit", style: StyleManagement.testStyleBlack12),
+                                          TextWidget(title: "8 unit", style: StyleManagement.testStyleBlack12),
                                           Container(
                                             height: 15.0,
                                             width: 1.0,
                                             margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                             color: Colors.grey,
                                           ),
-                                          const Text("12 Jam", style: StyleManagement.testStyleBlack12),
+                                          TextWidget(title: "12 Jam", style: StyleManagement.testStyleBlack12),
 
                                         ],
                                       ),
@@ -274,11 +275,11 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Air Condition", style: StyleManagement.testStyleBlackBold14),
+                                          TextWidget(title: "Air Condition", style: StyleManagement.testStyleBlackBold14),
                                           Row(
                                             children: [
-                                              Text("1000", style: StyleManagement.testStyleAppColorBold14),
-                                              Text(" kw/h", style: StyleManagement.testStyleAppColor12),
+                                              TextWidget(title: "1000", style: StyleManagement.testStyleAppColorBold14),
+                                              TextWidget(title: " kw/h", style: StyleManagement.testStyleAppColor12),
                                             ],
                                           ),
 
@@ -288,7 +289,7 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Kitchen - Living room", style: StyleManagement.testStyleBlack14),
+                                          TextWidget(title: "Kitchen - Living room", style: StyleManagement.testStyleBlack14),
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             children: [
@@ -298,7 +299,7 @@ class ScreenThree extends StatelessWidget {
                                                 fit: BoxFit.fill,
                                                 color: Colors.green[300],
                                               ),
-                                              const Text("  -10.2%", style: StyleManagement.testStyleGreen12),
+                                              TextWidget(title: "  -10.2%", style: StyleManagement.testStyleGreen12),
                                             ],
                                           ),
 
@@ -308,15 +309,14 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
-                                          const Text("8 unit", style: StyleManagement.testStyleBlack12),
+                                          TextWidget(title: "8 unit", style: StyleManagement.testStyleBlack12),
                                           Container(
                                             height: 15.0,
                                             width: 1.0,
                                             margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                             color: Colors.grey,
                                           ),
-                                          const Text("12 Jam", style: StyleManagement.testStyleBlack12),
-
+                                          TextWidget(title: "12 Jam", style: StyleManagement.testStyleBlack12),
                                         ],
                                       ),
                                     ],
@@ -360,11 +360,11 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Wireless Speaker", style: StyleManagement.testStyleBlackBold14),
+                                          TextWidget(title: "Wireless Speaker", style: StyleManagement.testStyleBlackBold14),
                                           Row(
                                             children: [
-                                              Text("1090", style: StyleManagement.testStyleAppColorBold14),
-                                              Text(" kw/h", style: StyleManagement.testStyleAppColor12),
+                                              TextWidget(title: "1090", style: StyleManagement.testStyleAppColorBold14),
+                                              TextWidget(title: " kw/h", style: StyleManagement.testStyleAppColor12),
                                             ],
                                           ),
 
@@ -374,7 +374,7 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Bedroom", style: StyleManagement.testStyleBlack14),
+                                          TextWidget(title: "Bedroom", style: StyleManagement.testStyleBlack14),
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             children: [
@@ -384,7 +384,7 @@ class ScreenThree extends StatelessWidget {
                                                 fit: BoxFit.fill,
                                                 color: Colors.green[300],
                                               ),
-                                              const Text("  -10.2%", style: StyleManagement.testStyleGreen12),
+                                              TextWidget(title: "  -10.2%", style: StyleManagement.testStyleGreen12),
                                             ],
                                           ),
 
@@ -394,15 +394,14 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
-                                          const Text("2 unit", style: StyleManagement.testStyleBlack12),
+                                          TextWidget(title: "2 unit", style: StyleManagement.testStyleBlack12),
                                           Container(
                                             height: 15.0,
                                             width: 1.0,
                                             margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                             color: Colors.grey,
                                           ),
-                                          const Text("3 Jam", style: StyleManagement.testStyleBlack12),
-
+                                          TextWidget(title: "3 Jam", style: StyleManagement.testStyleBlack12),
                                         ],
                                       ),
                                     ],
@@ -446,21 +445,20 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Television", style: StyleManagement.testStyleBlackBold14),
+                                          TextWidget(title: "Television", style: StyleManagement.testStyleBlackBold14),
                                           Row(
                                             children: [
-                                              Text("1000", style: StyleManagement.testStyleAppColorBold14),
-                                              Text(" kw/h", style: StyleManagement.testStyleAppColor12),
+                                              TextWidget(title: "1000", style: StyleManagement.testStyleAppColorBold14),
+                                              TextWidget(title: " kw/h", style: StyleManagement.testStyleAppColor12),
                                             ],
                                           ),
-
                                         ],
                                       ),
                                       const SizedBox(height: 5.0),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          const Text("Living Room", style: StyleManagement.testStyleBlack14),
+                                          TextWidget(title: "Living Room", style: StyleManagement.testStyleBlack14),
                                           Row(
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             children: [
@@ -470,7 +468,7 @@ class ScreenThree extends StatelessWidget {
                                                 fit: BoxFit.fill,
                                                 color: Colors.red[300],
                                               ),
-                                              const Text("  -100.2%", style: StyleManagement.testStyleRed12),
+                                              TextWidget(title: "  -100.2%", style: StyleManagement.testStyleRed12),
                                             ],
                                           ),
 
@@ -480,15 +478,14 @@ class ScreenThree extends StatelessWidget {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.start,
                                         children: [
-                                          const Text("1 unit", style: StyleManagement.testStyleBlack12),
+                                          TextWidget(title: "1 unit", style: StyleManagement.testStyleBlack12),
                                           Container(
                                             height: 15.0,
                                             width: 1.0,
                                             margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                             color: Colors.grey,
                                           ),
-                                          const Text("12 Jam", style: StyleManagement.testStyleBlack12),
-
+                                          TextWidget(title: "12 Jam", style: StyleManagement.testStyleBlack12),
                                         ],
                                       ),
                                     ],
@@ -498,7 +495,6 @@ class ScreenThree extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 10.0),
-
                         ],
                       ),
                     ),
@@ -575,7 +571,7 @@ class ScreenThree extends StatelessWidget {
                     height: 25.0,
                   ),
                   const SizedBox(width: 5.0),
-                  Text("Usage", style: StyleManagement.testStyleAppColorBold16)
+                  TextWidget(title: "Usage", style: StyleManagement.testStyleAppColorBold16)
                 ],
               ),
             ),

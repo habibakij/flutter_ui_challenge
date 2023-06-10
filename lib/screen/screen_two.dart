@@ -4,6 +4,7 @@ import 'package:ui_test/screen/screen_four.dart';
 import 'package:ui_test/screen/screen_three.dart';
 import '../utils/color_management.dart';
 import '../utils/style_management.dart';
+import 'widget/text_widget.dart';
 import 'home_screen.dart';
 
 class ScreenTwo extends StatefulWidget {
@@ -60,10 +61,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              "Smart Home",
-                              style: StyleManagement.testStyleWhiteBold18,
-                            ),
+                            TextWidget(title: "Smart Home", style: StyleManagement.testStyleWhiteBold18),
                             Container(
                               margin: const EdgeInsets.only(top: 10.0),
                               padding: const EdgeInsets.all(10.0),
@@ -128,7 +126,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text("Smart Mode", style: StyleManagement.testStyleAppColorBold16),
+                              TextWidget(title: "Smart Mode", style: StyleManagement.testStyleAppColorBold16),
                               Container(
                                 margin: const EdgeInsets.only(left: 5.0),
                                 padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0, bottom: 5.0),
@@ -136,7 +134,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                   color: CustomColor.appColor,
                                   borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                                 ),
-                                child: const Text("4", style: StyleManagement.testStyleWhiteBold14),
+                                child: TextWidget(title: "4", style: StyleManagement.testStyleWhiteBold14),
                               ),
                             ],
                           ),
@@ -155,29 +153,23 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Smart Lamp", style: StyleManagement.testStyleBlackBold14),
-                                        const SizedBox(height: 5.0,),
+                                        TextWidget(title: "Smart Lamp", style: StyleManagement.testStyleBlackBold14),
+                                        const SizedBox(height: 5.0),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Dining Rooms",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Dining Rooms", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "Tue Thu",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Tue Thu", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
                                     ),
-                                    const SizedBox(height: 5.0,),
+                                    const SizedBox(height: 5.0),
                                     Image.asset(
                                       'assets/images/on.png',
                                       width: 55.0,
@@ -200,18 +192,12 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                             height: 40.0,
                                             fit: BoxFit.fill,
                                           ),
-                                          const SizedBox(width: 15.0,),
+                                          const SizedBox(width: 15.0),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -229,16 +215,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -259,7 +239,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',
@@ -306,24 +286,18 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Air Condition", style: StyleManagement.testStyleBlackBold14),
+                                        TextWidget(title: "Air Condition", style: StyleManagement.testStyleBlackBold14),
                                         const SizedBox(height: 5.0,),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Bedroom",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Bedroom", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "sun",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "sun", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
@@ -353,16 +327,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                           ),
                                           const SizedBox(width: 15.0,),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "10 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "10 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -380,16 +348,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "11 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "11 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -410,7 +372,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',
@@ -457,24 +419,18 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Smart Lamp", style: StyleManagement.testStyleBlackBold14),
+                                        TextWidget(title: "Smart Lamp", style: StyleManagement.testStyleBlackBold14),
                                         const SizedBox(height: 5.0,),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Badroom 2",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Badroom 2", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "Fri",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Fri", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
@@ -504,16 +460,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                           ),
                                           const SizedBox(width: 15.0,),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -531,16 +481,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -561,7 +505,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',
@@ -608,24 +552,18 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Television", style: StyleManagement.testStyleBlackBold14),
+                                        TextWidget(title: "Television", style: StyleManagement.testStyleBlackBold14),
                                         const SizedBox(height: 5.0,),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Living Room",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Living Room", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "Tue Thu",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Tue Thu", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
@@ -655,16 +593,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                           ),
                                           const SizedBox(width: 15.0,),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -682,16 +614,10 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children:  [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -712,7 +638,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',
@@ -800,7 +726,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     height: 25.0,
                   ),
                   const SizedBox(width: 5.0),
-                  Text("Smart", style: StyleManagement.testStyleAppColorBold16)
+                  TextWidget(title: "Smart", style: StyleManagement.testStyleAppColorBold16)
                 ],
               ),
             ),

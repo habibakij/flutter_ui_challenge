@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_test/screen/home_screen.dart';
 import '../utils/color_management.dart';
 import '../utils/style_management.dart';
+import 'widget/text_widget.dart';
 
 class ScreenFour extends StatelessWidget {
 
@@ -65,13 +66,10 @@ class ScreenFour extends StatelessWidget {
                                   InkWell(
                                     child: SizedBox(
                                       width: (MediaQuery.of(context).size.width / 2) - 30,
-                                      child: const Row(
+                                      child: Row(
                                         children: [
-                                          Icon(Icons.arrow_back_ios, size: 15, color: Colors.white,),
-                                          Text(
-                                            "Back",
-                                            style: StyleManagement.testStyleWhite12,
-                                          ),
+                                          const Icon(Icons.arrow_back_ios, size: 15, color: Colors.white,),
+                                          TextWidget(title: "Back", style: StyleManagement.testStyleWhite12),
                                         ],
                                       ),
                                     ),
@@ -79,15 +77,12 @@ class ScreenFour extends StatelessWidget {
                                       Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                                     },
                                   ),
-                                  const Text(
-                                    "Lamp",
-                                    style: StyleManagement.testStyleWhiteBold18,
-                                  ),
+                                  TextWidget(title: "Lamp", style: StyleManagement.testStyleWhiteBold18),
                                 ],
                               ),
-                              const Align(
+                              Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Dining room", style: StyleManagement.testStyleWhite14),
+                                child: TextWidget(title: "Dining room", style: StyleManagement.testStyleWhite14),
                               ),
                               Container(
                                 margin: const EdgeInsets.only(top: 10.0),
@@ -102,16 +97,16 @@ class ScreenFour extends StatelessWidget {
                               Container(
                                 margin: const EdgeInsets.only(top: 10.0),
                                 alignment: Alignment.centerLeft,
-                                child: const Text("80%", style: StyleManagement.testStyleWhiteBold40),
+                                child: TextWidget(title: "80%", style: StyleManagement.testStyleWhiteBold40),
                               ),
-                              const Align(
+                              Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Brightness", style: StyleManagement.testStyleWhite14),
+                                child: TextWidget(title: "Brightness", style: StyleManagement.testStyleWhite14),
                               ),
                               Container(
                                 margin: const EdgeInsets.only(top: 10.0),
                                 alignment: Alignment.centerLeft,
-                                child: const Text("Insensity", style: StyleManagement.testStyleWhiteBold14),
+                                child: TextWidget(title: "Insensity", style: StyleManagement.testStyleWhiteBold14),
                               ),
                               Container(
                                 margin: const EdgeInsets.only(top: 10.0),
@@ -154,46 +149,46 @@ class ScreenFour extends StatelessWidget {
                               Container(
                                 margin: const EdgeInsets.only(top: 10.0),
                                 alignment: Alignment.centerLeft,
-                                child: const Text("Usages", style: StyleManagement.testStyleWhiteBold14),
+                                child: TextWidget(title: "Usages", style: StyleManagement.testStyleWhiteBold14),
                               ),
                               const SizedBox(height: 10.0),
-                              const Row(
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text("Use Today", style: StyleManagement.testStyleWhite14),
+                                  TextWidget(title: "Use Today", style: StyleManagement.testStyleWhite14),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text("50", style: StyleManagement.testStyleWhiteBold14),
-                                      Text(" watt", style: StyleManagement.testStyleWhite12),
+                                      TextWidget(title: "50", style: StyleManagement.testStyleWhiteBold14),
+                                      TextWidget(title: " watt", style: StyleManagement.testStyleWhite12),
                                     ],
                                   ),
                                 ],
                               ),
                               const SizedBox(height: 5.0),
-                              const Row(
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text("Use Week", style: StyleManagement.testStyleWhite14),
+                                  TextWidget(title: "Use Week", style: StyleManagement.testStyleWhite14),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text("500", style: StyleManagement.testStyleWhiteBold14),
-                                      Text(" watt", style: StyleManagement.testStyleWhite12),
+                                      TextWidget(title: "500", style: StyleManagement.testStyleWhiteBold14),
+                                      TextWidget(title: " watt", style: StyleManagement.testStyleWhite12),
                                     ],
                                   ),
                                 ],
                               ),
                               const SizedBox(height: 5.0),
-                              const Row(
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text("Use Month", style: StyleManagement.testStyleWhite14),
+                                  TextWidget(title: "Use Month", style: StyleManagement.testStyleWhite14),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text("5000", style: StyleManagement.testStyleWhiteBold14),
-                                      Text(" watt", style: StyleManagement.testStyleWhite12),
+                                      TextWidget(title: "5000", style: StyleManagement.testStyleWhiteBold14),
+                                      TextWidget(title: " watt", style: StyleManagement.testStyleWhite12),
                                     ],
                                   ),
                                 ],
@@ -202,9 +197,6 @@ class ScreenFour extends StatelessWidget {
                           ),
                         ),
 
-                        /*Builder(builder: (BuildContext context){
-                          return
-                        })*/
                       ],
                     ),
                   ),
@@ -227,7 +219,7 @@ class ScreenFour extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Text("Schedule", style: StyleManagement.testStyleBlackBold16),
+                                  TextWidget(title: "Schedule", style: StyleManagement.testStyleBlackBold16),
                                   Container(
                                     margin: const EdgeInsets.only(left: 5.0),
                                     padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0, bottom: 5.0),
@@ -235,7 +227,7 @@ class ScreenFour extends StatelessWidget {
                                       color: CustomColor.appColor,
                                       borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                                     ),
-                                    child: const Text("3", style: StyleManagement.testStyleWhiteBold14),
+                                    child: TextWidget(title: "3", style: StyleManagement.testStyleWhiteBold14),
                                   ),
                                 ],
                               ),
@@ -265,24 +257,18 @@ class ScreenFour extends StatelessWidget {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Smart Lamp", style: StyleManagement.testStyleBlackBold14),
-                                        const SizedBox(height: 5.0,),
+                                        TextWidget(title: "Smart Lamp", style: StyleManagement.testStyleBlackBold14),
+                                        const SizedBox(height: 5.0),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Dining Rooms",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Dining Rooms", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "Tue Thu",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Tue Thu", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
@@ -312,16 +298,10 @@ class ScreenFour extends StatelessWidget {
                                           ),
                                           const SizedBox(width: 15.0,),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -339,22 +319,16 @@ class ScreenFour extends StatelessWidget {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children:  [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(width: 5.0,),
+                                    const SizedBox(width: 5.0),
                                     Container(
                                       height: 40.0,
                                       width: 1.0,
@@ -369,7 +343,7 @@ class ScreenFour extends StatelessWidget {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',
@@ -416,24 +390,18 @@ class ScreenFour extends StatelessWidget {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Smart Lamp", style: StyleManagement.testStyleBlackBold14),
-                                        const SizedBox(height: 5.0,),
+                                        TextWidget(title: "Smart Lamp", style: StyleManagement.testStyleBlackBold14),
+                                        const SizedBox(height: 5.0),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Dining Rooms",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Dining Rooms", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "Tue Thu",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Tue Thu", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
@@ -447,7 +415,7 @@ class ScreenFour extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 10.0,),
+                                const SizedBox(height: 10.0),
                                 Row(
                                   children: [
                                     Expanded(
@@ -463,16 +431,10 @@ class ScreenFour extends StatelessWidget {
                                           ),
                                           const SizedBox(width: 15.0,),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -490,16 +452,10 @@ class ScreenFour extends StatelessWidget {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -520,7 +476,7 @@ class ScreenFour extends StatelessWidget {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',
@@ -567,24 +523,18 @@ class ScreenFour extends StatelessWidget {
                                     Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        const Text("Smart Lamp", style: StyleManagement.testStyleBlackBold14),
-                                        const SizedBox(height: 5.0,),
+                                        TextWidget(title: "Smart Lamp", style: StyleManagement.testStyleBlackBold14),
+                                        const SizedBox(height: 5.0),
                                         Row(
                                           children: [
-                                            const Text(
-                                              "Dining Rooms",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Dining Rooms", style: StyleManagement.testStyleBlack12),
                                             Container(
                                               height: 10.0,
                                               width: 1.0,
                                               margin: const EdgeInsets.only(left: 5.0, right: 5.0),
                                               color: Colors.black,
                                             ),
-                                            const Text(
-                                              "Tue Thu",
-                                              style: StyleManagement.testStyleBlack12,
-                                            ),
+                                            TextWidget(title: "Tue Thu", style: StyleManagement.testStyleBlack12),
                                           ],
                                         ),
                                       ],
@@ -612,18 +562,12 @@ class ScreenFour extends StatelessWidget {
                                             height: 40.0,
                                             fit: BoxFit.fill,
                                           ),
-                                          const SizedBox(width: 15.0,),
+                                          const SizedBox(width: 15.0),
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "from",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 PM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "from", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 PM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -641,16 +585,10 @@ class ScreenFour extends StatelessWidget {
                                         mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Column(
-                                            children: const [
-                                              Text(
-                                                "to",
-                                                style: StyleManagement.testStyleBlack12,
-                                              ),
-                                              SizedBox(height: 5.0,),
-                                              Text(
-                                                "8 AM",
-                                                style: StyleManagement.testStyleBlackBold12,
-                                              ),
+                                            children: [
+                                              TextWidget(title: "to", style: StyleManagement.testStyleBlack12),
+                                              const SizedBox(height: 5.0),
+                                              TextWidget(title: "8 AM", style: StyleManagement.testStyleBlackBold12),
                                             ],
                                           ),
                                         ],
@@ -671,7 +609,7 @@ class ScreenFour extends StatelessWidget {
                                             padding: const EdgeInsets.all(5.0),
                                             decoration: BoxDecoration(
                                               color: Colors.grey[200],
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                              borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                                             ),
                                             child: Image.asset(
                                               'assets/images/delete.png',

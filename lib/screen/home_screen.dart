@@ -5,9 +5,9 @@ import 'package:ui_test/screen/screen_three.dart';
 import 'package:ui_test/screen/screen_two.dart';
 import 'package:ui_test/utils/color_management.dart';
 import 'package:ui_test/utils/style_management.dart';
+import 'package:ui_test/screen/widget/text_widget.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
   @override
   State<HomeScreen> createState() => _MyHomePageState();
 }
@@ -85,15 +85,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                     Column(
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: const [
-                                        Text(
-                                          "Good Morning,",
-                                          style: StyleManagement.testStyleWhiteBold18,
-                                        ),
-                                        Text(
-                                          "Kimberly Mastrengelo",
-                                          style: StyleManagement.testStyleBlack12,
-                                        ),
+                                      children: [
+                                        TextWidget(title: "Good Morning,", style: StyleManagement.testStyleWhiteBold18),
+                                        TextWidget(title: "Kimberly Mastrengelo", style: StyleManagement.testStyleBlack12)
                                       ],
                                     ),
                                     Container(
@@ -124,18 +118,18 @@ class _MyHomePageState extends State<HomeScreen> {
                                 children: [
                                   Container(
                                     padding: const EdgeInsets.only(bottom: 16.0, top: 8.0),
-                                    child: const Row(
+                                    child:  Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Row(
                                           mainAxisAlignment: MainAxisAlignment.start,
                                           children: [
-                                            Stack(
+                                            const Stack(
                                               children: [
                                                 Positioned(
                                                   child: Icon(
                                                     Icons.sunny,
-                                                    size: 60,
+                                                    size: 60.0,
                                                     color: Colors.amber,
                                                   ),
                                                 ),
@@ -150,18 +144,18 @@ class _MyHomePageState extends State<HomeScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(width: 10),
+                                            const SizedBox(width: 10.0),
                                             Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
-                                                Text("jun 07, 2023 01:43 pm", style: StyleManagement.testStyleBlack12,),
-                                                Text("Cloudy", style: StyleManagement.testStyleBlackBold18,),
-                                                Text("Dhaka, Bangladesh", style: StyleManagement.testStyleBlack12,),
+                                                TextWidget(title: "jun 07, 2023 01:43 pm", style: StyleManagement.testStyleBlack12),
+                                                TextWidget(title: "Cloudy", style: StyleManagement.testStyleBlackBold18),
+                                                TextWidget(title: "Dhaka, Bangladesh", style: StyleManagement.testStyleBlack12),
                                               ],
                                             ),
                                           ],
                                         ),
-                                        Text("90\u2103", style: StyleManagement.testStyleBlackBold18,),
+                                        const Text("90\u2103", style: StyleManagement.testStyleBlackBold18,),
                                       ],
                                     ),
                                   ),
@@ -195,12 +189,12 @@ class _MyHomePageState extends State<HomeScreen> {
                                                       fit: BoxFit.fill,
                                                     ),
                                                   ),
-                                                  const Text("97", style: StyleManagement.testStyleBlackBold16,),
-                                                  const Text("%", style: StyleManagement.testStyleBlack12),
+                                                  TextWidget(title: "97", style: StyleManagement.testStyleBlackBold16),
+                                                  TextWidget(title: "%", style: StyleManagement.testStyleBlack12),
                                                 ],
                                               ),
                                               const SizedBox(height: 5.0),
-                                              const Text("Humidity", style: StyleManagement.testStyleBlack16,)
+                                              TextWidget(title: "Humidity", style: StyleManagement.testStyleBlack16,)
                                             ],
                                           ),
                                         ),
@@ -228,12 +222,12 @@ class _MyHomePageState extends State<HomeScreen> {
                                                       fit: BoxFit.fill,
                                                     ),
                                                   ),
-                                                  const Text("7", style: StyleManagement.testStyleBlackBold16,),
-                                                  const Text("km", style: StyleManagement.testStyleBlack12),
+                                                  TextWidget(title: "7", style: StyleManagement.testStyleBlackBold16,),
+                                                  TextWidget(title: "km", style: StyleManagement.testStyleBlack12),
                                                 ],
                                               ),
                                               const SizedBox(height: 5.0),
-                                              const Text("Visibility", style: StyleManagement.testStyleBlack16,)
+                                              TextWidget(title: "Visibility", style: StyleManagement.testStyleBlack16,)
                                             ],
                                           ),
                                         ),
@@ -261,12 +255,12 @@ class _MyHomePageState extends State<HomeScreen> {
                                                       fit: BoxFit.fill,
                                                     ),
                                                   ),
-                                                  const Text("97", style: StyleManagement.testStyleBlackBold16,),
-                                                  const Text("%", style: StyleManagement.testStyleBlack12),
+                                                  TextWidget(title: "97", style: StyleManagement.testStyleBlackBold16,),
+                                                  TextWidget(title: "%", style: StyleManagement.testStyleBlack12),
                                                 ],
                                               ),
                                               const SizedBox(height: 5.0),
-                                              const Text("NE Wind", style: StyleManagement.testStyleBlack16,)
+                                              TextWidget(title: "NE Wind", style: StyleManagement.testStyleBlack16,)
                                             ],
                                           ),
                                         ),
@@ -306,7 +300,7 @@ class _MyHomePageState extends State<HomeScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text("Rooms", style: StyleManagement.testStyleBlackBold16),
+                            TextWidget(title: "Rooms", style: StyleManagement.testStyleBlackBold16),
                             Text(
                               "See All",
                               style: TextStyle(
@@ -348,7 +342,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                     height: 80.0,
                                     fit: BoxFit.fill,
                                   ),
-                                  const Text("Living Rooms", style: StyleManagement.testStyleBlackBold16),
+                                  TextWidget(title: "Living Rooms", style: StyleManagement.testStyleBlackBold16),
                                   const SizedBox(height: 5.0),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -360,9 +354,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                           color: HexColor("#FFE266"),
                                           borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                                         ),
-                                        child: const Text("5", style: StyleManagement.testStyleBlack14),
+                                        child: TextWidget(title: "5", style: StyleManagement.testStyleBlack14),
                                       ),
-                                      const Text("Devices", style: StyleManagement.testStyleBlack12),
+                                      TextWidget(title: "Devices", style: StyleManagement.testStyleBlack12),
                                     ],
                                   ),
 
@@ -408,9 +402,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                           color: HexColor("#FFE266"),
                                           borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                                         ),
-                                        child: const Text("8", style: StyleManagement.testStyleBlack14),
+                                        child: TextWidget(title: "8", style: StyleManagement.testStyleBlack14),
                                       ),
-                                      const Text("Devices", style: StyleManagement.testStyleBlack12),
+                                      TextWidget(title: "Devices", style: StyleManagement.testStyleBlack12),
                                     ],
                                   ),
 
@@ -426,7 +420,7 @@ class _MyHomePageState extends State<HomeScreen> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Text("Active", style: StyleManagement.testStyleBlackBold16),
+                                TextWidget(title: "Active", style: StyleManagement.testStyleBlackBold16),
                                 Container(
                                   margin: const EdgeInsets.only(left: 5.0),
                                   padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0, bottom: 5.0),
@@ -434,7 +428,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                     color: CustomColor.appColor,
                                     borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                                   ),
-                                  child: const Text("8", style: StyleManagement.testStyleWhiteBold14),
+                                  child: TextWidget(title: "8", style: StyleManagement.testStyleWhiteBold14),
                                 ),
                               ],
                             ),
@@ -475,9 +469,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                       Column(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         mainAxisAlignment: MainAxisAlignment.center,
-                                        children: const [
-                                          Text("Temperature", style: StyleManagement.testStyleWhite12),
-                                          Text("19\u2103", style: StyleManagement.testStyleWhiteBold18),
+                                        children: [
+                                          TextWidget(title: "Temperature", style: StyleManagement.testStyleWhite12),
+                                          const Text("19\u2103", style: StyleManagement.testStyleWhiteBold18),
                                         ],
                                       ),
                                     ],
@@ -488,9 +482,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                     children: [
                                       Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
-                                          Text("AC", style: StyleManagement.testStyleWhiteBold18),
-                                          Text("Living room", style: StyleManagement.testStyleWhite12),
+                                        children: [
+                                          TextWidget(title: "AC", style: StyleManagement.testStyleWhiteBold18),
+                                          TextWidget(title: "Living room", style: StyleManagement.testStyleWhite12),
                                         ],
                                       ),
                                       Image.asset(
@@ -501,7 +495,6 @@ class _MyHomePageState extends State<HomeScreen> {
                                       ),
                                     ],
                                   ),
-
 
                                 ],
                               ),
@@ -529,9 +522,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                       Column(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         mainAxisAlignment: MainAxisAlignment.center,
-                                        children: const [
-                                          Text("Colour", style: StyleManagement.testStyleWhite12),
-                                          Text("White", style: StyleManagement.testStyleWhiteBold18),
+                                        children: [
+                                          TextWidget(title: "Colour", style: StyleManagement.testStyleWhite12),
+                                          TextWidget(title: "White", style: StyleManagement.testStyleWhiteBold18),
                                         ],
                                       ),
                                     ],
@@ -542,9 +535,9 @@ class _MyHomePageState extends State<HomeScreen> {
                                     children: [
                                       Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: const [
-                                          Text("Lamp", style: StyleManagement.testStyleWhiteBold18),
-                                          Text("Dining room", style: StyleManagement.testStyleWhite12),
+                                        children: [
+                                          TextWidget(title: "Lamp", style: StyleManagement.testStyleWhiteBold18),
+                                          TextWidget(title: "Dining room", style: StyleManagement.testStyleWhite12),
                                         ],
                                       ),
                                       Image.asset(
@@ -555,7 +548,6 @@ class _MyHomePageState extends State<HomeScreen> {
                                       ),
                                     ],
                                   ),
-
 
                                 ],
                               ),
@@ -600,7 +592,7 @@ class _MyHomePageState extends State<HomeScreen> {
                     height: 25.0,
                   ),
                   const SizedBox(width: 5.0),
-                  Text("Home", style: StyleManagement.testStyleAppColorBold16)
+                  TextWidget(title: "Home", style: StyleManagement.testStyleAppColorBold16)
                 ],
               ),
             ),
