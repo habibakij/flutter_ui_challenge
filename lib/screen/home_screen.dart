@@ -123,15 +123,15 @@ class _MyHomePageState extends State<HomeScreen> {
                               child: Column(
                                 children: [
                                   Container(
-                                    padding: const EdgeInsets.only(bottom: 8.0),
-                                    child: Row(
+                                    padding: const EdgeInsets.only(bottom: 16.0, top: 8.0),
+                                    child: const Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Row(
                                           mainAxisAlignment: MainAxisAlignment.start,
                                           children: [
                                             Stack(
-                                              children: const [
+                                              children: [
                                                 Positioned(
                                                   child: Icon(
                                                     Icons.sunny,
@@ -150,10 +150,10 @@ class _MyHomePageState extends State<HomeScreen> {
                                                 ),
                                               ],
                                             ),
-                                            const SizedBox(width: 10),
+                                            SizedBox(width: 10),
                                             Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: const [
+                                              children: [
                                                 Text("jun 07, 2023 01:43 pm", style: StyleManagement.testStyleBlack12,),
                                                 Text("Cloudy", style: StyleManagement.testStyleBlackBold18,),
                                                 Text("Dhaka, Bangladesh", style: StyleManagement.testStyleBlack12,),
@@ -161,18 +161,18 @@ class _MyHomePageState extends State<HomeScreen> {
                                             ),
                                           ],
                                         ),
-                                        const Text("90\u2103", style: StyleManagement.testStyleBlackBold18,),
+                                        Text("90\u2103", style: StyleManagement.testStyleBlackBold18,),
                                       ],
                                     ),
                                   ),
                                   const Divider(height: 1, color: Colors.black,),
                                   Container(
-                                    padding: const EdgeInsets.only(top: 8.0, bottom: 3.0),
+                                    padding: const EdgeInsets.only(top: 16.0, bottom: 8.0),
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Container(
-                                          padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           decoration: const BoxDecoration(
                                               color: Colors.white54,
                                               borderRadius: BorderRadius.all(Radius.circular(10))
@@ -205,7 +205,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                           ),
                                         ),
                                         Container(
-                                          padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           decoration: const BoxDecoration(
                                               color: Colors.white54,
                                               borderRadius: BorderRadius.all(Radius.circular(10))
@@ -238,7 +238,7 @@ class _MyHomePageState extends State<HomeScreen> {
                                           ),
                                         ),
                                         Container(
-                                          padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           decoration: const BoxDecoration(
                                               color: Colors.white54,
                                               borderRadius: BorderRadius.all(Radius.circular(10))

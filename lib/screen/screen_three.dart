@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:ui_test/screen/home_screen.dart';
+import 'package:ui_test/screen/screen_four.dart';
 import 'package:ui_test/screen/screen_two.dart';
 
 import '../utils/color_management.dart';
@@ -11,7 +12,6 @@ import 'chart/line_chart_container.dart';
 
 
 class ScreenThree extends StatelessWidget {
-  const ScreenThree({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -179,9 +179,9 @@ class ScreenThree extends StatelessWidget {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                const SizedBox(width: 20.0),
+                                const SizedBox(width: 10.0),
                                 SizedBox(
-                                  width: 250,
+                                  width: 250.0,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -265,9 +265,9 @@ class ScreenThree extends StatelessWidget {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                const SizedBox(width: 20.0),
+                                const SizedBox(width: 10.0),
                                 SizedBox(
-                                  width: 250,
+                                  width: 250.0,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -351,9 +351,9 @@ class ScreenThree extends StatelessWidget {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                const SizedBox(width: 20.0),
+                                const SizedBox(width: 10.0),
                                 SizedBox(
-                                  width: 250,
+                                  width: 250.0,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -437,9 +437,9 @@ class ScreenThree extends StatelessWidget {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
-                                const SizedBox(width: 20.0),
+                                const SizedBox(width: 10.0),
                                 SizedBox(
-                                  width: 250,
+                                  width: 250.0,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -579,19 +579,24 @@ class ScreenThree extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              height: 50.0,
-              width: 70.0,
-              alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            InkWell(
+              child: Container(
+                height: 50.0,
+                width: 70.0,
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
+                child: Image.asset(
+                  'assets/images/user.png',
+                  width: 30.0,
+                  height: 30.0,
+                ),
               ),
-              child: Image.asset(
-                'assets/images/user.png',
-                width: 30.0,
-                height: 30.0,
-              ),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenFour()));
+              },
             ),
           ],
         ),

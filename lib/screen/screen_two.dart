@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:ui_test/screen/screen_four.dart';
 import 'package:ui_test/screen/screen_three.dart';
 import '../utils/color_management.dart';
 import '../utils/style_management.dart';
 import 'home_screen.dart';
 
 class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({Key? key}) : super(key: key);
   @override
   State<ScreenTwo> createState() => _ScreenTwoState();
 }
@@ -823,19 +823,24 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenThree()));
               },
             ),
-            Container(
-              height: 50.0,
-              width: 70.0,
-              alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            InkWell(
+              child: Container(
+                height: 50.0,
+                width: 70.0,
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
+                child: Image.asset(
+                  'assets/images/user.png',
+                  width: 30.0,
+                  height: 30.0,
+                ),
               ),
-              child: Image.asset(
-                'assets/images/user.png',
-                width: 30.0,
-                height: 30.0,
-              ),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenFour()));
+              },
             ),
           ],
         ),
