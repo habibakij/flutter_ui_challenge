@@ -1,10 +1,4 @@
-# ui_test
-
-A new Flutter project.
-
-Video and apk link.
-Google drive:
-https://drive.google.com/drive/folders/1cuUqRRsZKGBxecdC4T2BJFtJuEy6oDBx?usp=drive_link
+#flutter_ui_challenge
 
 Home Screen
 
